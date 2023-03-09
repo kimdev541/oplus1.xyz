@@ -77,6 +77,7 @@ install_letsencrypt()
 clear
 echo "Installing letsencrypt."
 {
+apt remove apache2 -y
 domain=$(cat /root/domain)
 curl  https://get.acme.sh | sh
 ~/.acme.sh/acme.sh --register-account -m firenetdev@gmail.com --server zerossl
