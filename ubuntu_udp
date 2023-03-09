@@ -51,7 +51,7 @@ echo 'modifying hysteria.'
 {
 rm -f /etc/hysteria/config.json
 
-echo "{
+echo '{
   "listen": ":5666",
   "cert": "/etc/hysteria/hysteria.crt",
   "key": "/etc/hysteria/hysteria.key",
@@ -64,7 +64,7 @@ echo "{
     "config": ["vpnmtk", "stronghold3"]
   }
 }
-" >> /etc/hysteria/config.json
+' >> /etc/hysteria/config.json
 
 chmod 755 /etc/hysteria/config.json
 chmod 755 /etc/hysteria/hysteria.crt
